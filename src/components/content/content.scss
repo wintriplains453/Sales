@@ -1,0 +1,230 @@
+.contentWrapper {
+  flex-grow: 1;
+  background: #F5F7F7;
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 1%;
+    color: #2D3242;
+  }
+}
+
+.wrapperMainContent {
+  max-width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+}
+
+.backgroundImage {
+  background-image: url('../../media/images/img.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapperCard {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Card {
+  position: relative;
+  border: 2px solid #D3D6DD;
+  width: 30%;
+  background: #fff;
+  margin: 10px 0;
+  margin-right: 20px;
+  flex-basis: 25%; 
+  border-radius: 20px;
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  &:hover {
+    border: 2px solid #01B9C5;
+    background: #E9F3F4;
+  }
+  p {
+    margin: 0;
+  }
+  &:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wrapperPrice {
+      width: 50%;
+      margin-right: 20px;
+    }
+    .CardName {
+      color: #000;
+      font-weight: 700;
+    }
+    p {
+      text-align: left;
+    }
+  }
+}
+.wrapperSale {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 10px;
+  top: -20px;
+  background-image: url('../../media/images/Star.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+}
+.CardName {
+  color: #687078;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: .01px;
+  margin: 10px !important;
+}
+.wrapperPrice {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.CardPrice {
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+.CardNotSale {
+  text-decoration: line-through;
+  font-size: 1.4rem;
+  color: #95979F;
+}
+.CardSlogan {
+  text-align: center;
+  transform: translateX(10px);
+  margin-top: 30px !important;
+}
+
+.textDefault {
+  font-weight: 500;
+  color: #2D3242;
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+.wrapperCheckbox {
+  max-width: 60%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+input[type="checkbox"] {
+  accent-color: #01B9C5;
+  width: 20px;
+  height: 20px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+.lightText {
+  font-weight: 200;
+  margin: 0;
+  color: #808798;
+}
+
+.btn {
+  background: #FD4D35;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 15px 60px;
+  border-radius: 20px;
+  margin: 15px 0;
+  transition: .3s ease-in-out;
+  &:hover {
+    background: #d22c16;
+  }
+}
+
+.backgroundDark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: rgba($color: #000000, $alpha: .7);
+}
+
+.popupWrapper {
+  position: fixed;
+  text-align: center;
+  padding: 20px;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 40%;
+  min-height: 40vh;
+  background: #fff;
+}
+
+@media screen and (max-width: 1600px) {
+  .wrapperMainContent {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 1174px) {
+  .Card:last-child {
+    flex-direction: column;
+    .wrapperPrice {
+      width: 50%;
+      margin-right: 20px;
+    }
+    .CardName {
+      color: #000;
+      font-weight: 700;
+    }
+    p {
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapperMainContent {
+    grid-template-columns: 1fr;
+    display: block;
+  }
+  .backgroundImage {
+    height: 80vh;
+  }
+  .wrapperCard {
+    flex-direction: column;
+  }
+  .Card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .textHide {
+    display: none;
+  }
+}
